@@ -1,0 +1,98 @@
+﻿@page "{SearchArg?}"
+@model QueryModel
+@{
+    ViewData["Title"] = "Query";
+}
+
+<div class="welcome">
+    <h1>Query resulting in a Table Display</h1>
+
+    <form method="post">
+        <label>
+            Enter a program name (or part of)
+            <input type="text" asp-for="SearchArg"
+                   placeholder="Enter program name" required />
+        </label>
+        <button type="submit" asp-page-handler="Fetch">Search</button>
+        <button type="submit" asp-page-handler="New" formnovalidate>New Program</button>
+        <br />
+        @if (Model.ProgramInfo != null)
+        {
+            if (Model.ProgramInfo.Count() == 0)
+            {
+                <p style="color: blueviolet; font-weight: bold; font-size: large">
+                    There are no programs matching your search request
+                </p>
+            }
+            else
+            {
+                <table>
+                    <thead>
+                        <tr>
+                            <th> </th>
+                            <th>Program</th>
+                            <th>Diploma</th>
+                            <th>School</th>
+                            <th>Tuition</th>
+                            <th>International</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model.ProgramInfo)
+                        {
+                            <tr>
+                                <td>
+                                    <a href="/CRUD/@item.ProgramID">
+                                        Edit
+                                    </a>
+                                </td>
+                                <td>@item.ProgramName</td>
+                                <td>@item.DiplomaName</td>
+                                <td>
+                                    <select disabled="true">
+                                        @foreach (var school in Model.SchoolList)
+                                        {
+                                            if (school.SchoolCode == item.SchoolCode)
+                                            {
+                                                <option value="@school.SchoolCode" selected>@school.SchoolName</option>
+                                            }
+                                            else
+                                            {
+                                                <option value="@school.SchoolCode">@school.SchoolName</option>
+                                            }
+                                        }
+                                    </select>
+                                </td>
+                                <td>@item.Tuition</td>
+                                <td>@item.InternationalTuition</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+                <p>
+                    @{
+                        foreach (var pageRef in Model.Pager)
+                        {
+                            if (pageRef == Model.Pager.CurrentPage)
+                            {
+                                <b>@pageRef.Text</b>
+                            }
+                            else
+                            {
+                                <a title="Page @pageRef.Page"
+                   asp-page="/Query"
+                   asp-route-currentpage="@pageRef.Page">
+                                    @pageRef.Text
+                                </a>
+                            }
+                        }
+                    }
+                </p>
+            }
+        }
+    </form>
+</div>
+
+
+
+

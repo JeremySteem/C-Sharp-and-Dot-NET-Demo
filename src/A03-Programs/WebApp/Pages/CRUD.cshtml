@@ -1,0 +1,95 @@
+﻿@page "{programid?}"
+@model CRUDModel
+@{
+    ViewData["Title"] = "CRUD";
+}
+
+@section Scripts
+{
+    <partial name="Shared/_ValidationScriptsPartial"/>
+}
+
+<div class="welcome">
+
+    <h1>Product Maintenance: CRUD Program ID : @Model.programid</h1>
+
+    @if (Model.HasFeedback)
+    {
+        <p>@Model.Feedback</p>
+    }
+    @if (Model.HasError)
+    {
+        <p>@Model.ErrorMessage</p>
+    }
+    
+    <div class="crud">
+        <form method="post">
+
+            <label>
+                Program ID:
+                <input type="text" asp-for="ProgramInfo.ProgramID" readonly data-val="false" />
+            </label>
+
+            <label>
+                Program Name:
+                <input type="text" asp-for="ProgramInfo.ProgramName" placeholder="Program Name" />
+                <span asp-validation-for="ProgramInfo.ProgramName"></span>
+            </label>
+
+            <label>
+                Diploma Name:
+                <input type="text" asp-for="ProgramInfo.DiplomaName" placeholder="Diploma Name" />
+                <span asp-validation-for="ProgramInfo.DiplomaName"></span>
+            </label>
+
+            <label>
+                School Name:
+                <select asp-for="ProgramInfo.SchoolCode">
+                    @foreach (var item in Model.SchoolList)
+                    {
+                        <option value="@item.SchoolCode"
+                            selected=@(Model.ProgramInfo != null && item.SchoolCode == Model.ProgramInfo.SchoolCode)>
+                            @item.SchoolName
+                        </option>
+                    }
+                </select>
+                <span asp-validation-for="ProgramInfo.SchoolCode"></span>
+            </label>
+
+            <label>
+                Tuition:
+                <input type="text" asp-for="ProgramInfo.Tuition" placeholder="Tuition" />
+                <span asp-validation-for="ProgramInfo.Tuition"></span>
+            </label>
+
+            <label>
+                International Tuition:
+                <input type="text" asp-for="ProgramInfo.InternationalTuition" placeholder="International Tuition" />
+                <span asp-validation-for="ProgramInfo.InternationalTuition"></span>
+            </label>
+
+            <br /><br />
+
+            @if (Model.ProgramInfo != null)
+            {
+                <button type="submit" asp-page-handler="New" disabled>Save New</button>
+                <button type="submit" asp-page-handler="Update">Update</button>
+                <button type="submit" asp-page-handler="Delete" formnovalidate
+                    onclick="return confirm('Are you sure you wish to discontinue the program?')">
+                    Delete
+                </button>
+            }
+            else
+            {
+                <button type="submit" asp-page-handler="New">Save New</button>
+                <button type="submit" asp-page-handler="Update" disabled>Update</button>
+                <button type="submit" asp-page-handler="Delete" formnovalidate disabled
+                    onclick="return confirm('Are you sure you wish to delete the program?')">
+                    Delete
+                </button>
+            }
+            <button type="submit" asp-page-handler="Clear" formnovalidate>Clear</button>
+        </form>
+    </div>
+</div>
+

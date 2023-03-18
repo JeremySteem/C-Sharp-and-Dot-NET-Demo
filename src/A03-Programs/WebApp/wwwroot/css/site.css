@@ -1,0 +1,361 @@
+/* Header and Nav Styles */
+header {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0rem;
+}
+
+body {
+    min-width: 320px;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+header
+.flex
+img {
+    height: 4rem;
+}
+
+header
+.header {
+    padding: 5%;
+    background-color: #fff;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+header a {
+    color: #191654;
+    text-decoration: none;
+    display: block;
+    font-family: 'Rubik', sans-serif;
+    font-weight: lighter;
+    font-size: 22px;
+}
+
+.toggle-btn {
+    border: none;
+    background-color: #fff;
+}
+
+svg rect {
+    fill: #191654;
+}
+
+.menu li {
+    /* the extra space from the additional line height makes tis a larger area and veritcally centers the text */
+    line-height: 40px;
+    text-align: left;
+    padding-left: 5%;
+    padding-right: 5%;
+    border-bottom: 2px solid #43c6ac;
+    padding-bottom: .75rem;
+    padding-top: .75rem;
+}
+
+    .menu
+    li
+    input {
+        font-family: 'Rubik', sans-serif;
+        font-weight: lighter;
+        font-size: 17px;
+        color: #191654;
+    }
+
+.flex input {
+    position: absolute;
+    top: -5rem; /*the height of the closed header */
+    left: 0;
+    width: 100vw;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.7s ease-in-out;
+    z-index: 1;
+    border: none;
+}
+
+.search-pic {
+    width: 20px;
+    margin: 0.5rem;
+}
+
+.search-wrapper {
+    border: 1px solid #191654;
+    display: flex;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+}
+
+.search-input {
+    border: none;
+    font-family: 'Rubik', sans-serif;
+    font-weight: lighter;
+    font-size: 17px;
+}
+
+/* style the header nav to let us hide the menu. Once it is hidden this will
+   be the default*/
+header nav {
+    /* position the menu - absolute */
+    position: absolute;
+    top: 6rem; /*the height of the closed header */
+    left: 0;
+    /* once postioned, this should diasppear from from the document
+       flow, and it does leave a space where it was. */
+    background-color: rgba(255, 255, 255);
+    width: 100vw;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.7s ease-in-out;
+    z-index: 1;
+}
+
+ul.menu {
+    padding-bottom: 1rem;
+}
+
+.show-nav {
+    max-height: 27.5rem; /*depends on the height of all the menu items*/
+}
+
+/**********************      Main body Styles       ***********************/
+
+.welcome {
+    background: linear-gradient(45deg, #191654, #43c6ac);
+    padding-top: 70px;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    /*display: flex;
+    flex-wrap: wrap;*/
+}
+
+h1 {
+    color: #fff;
+    font-family: 'Monoton', cursive;
+    font-size: 40px;
+    line-height: 60px;
+}
+
+.welcome
+p {
+    color: #fff;
+    font-size: 16px;
+    font-family: 'Rubik', sans-serif;
+    padding-top: 20px;
+    padding-bottom: 60px;
+    line-height: 25px;
+    font-weight: lighter;
+}
+
+.welcome
+a {
+    color: #fff;
+    font-size: 16px;
+    font-family: 'Rubik', sans-serif;
+    padding-top: 20px;
+    padding-bottom: 60px;
+    line-height: 25px;
+    font-weight: lighter;
+}
+
+h2 {
+    font-family: 'Monoton', cursive;
+    font-size: 35px;
+    text-decoration: underline;
+    text-decoration-color: #43c6ac;
+    text-underline-offset: 10px;
+    margin-bottom: 40px;
+}
+
+h4 {
+    padding-left: 1rem;
+    font-size: 12px;
+    font-family: 'Rubik', sans-serif;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    background-color: #191654;
+}
+
+h5 {
+    padding-left: 1rem;
+    font-size: 20px;
+    font-family: 'Rubik', sans-serif;
+    font-weight: lighter;
+    padding-bottom: 10px;
+    background-color: #191654;
+}
+
+h3 {
+    font-size: 25px;
+    font-family: 'Rubik', sans-serif;
+    font-weight: lighter;
+    color: #43c6ac;
+    margin-top: 25px;
+    margin-bottom: 35px;
+}
+
+.project-started
+h3
+a {
+    font-size: 25px;
+    font-family: 'Rubik', sans-serif;
+    font-weight: lighter;
+    color: #43c6ac;
+    margin-top: 25px;
+    margin-bottom: 35px;
+    text-decoration: none;
+}
+
+footer {
+    background-color: #191654;
+    color: #fff;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 5vw;
+    padding-right: 5vw;
+}
+
+footer
+h2 {
+        font-size: 25px;
+        text-decoration: none;
+    }
+
+    footer
+    p {
+        font-family: 'Rubik', sans-serif;
+        font-size: 15px;
+        line-height: 25px;
+    }
+
+footer
+a {
+    color: white;
+    text-decoration: none;
+    font-family: 'Rubik', sans-serif;
+    font-size: 15px;
+    line-height: 25px;
+    font-weight: lighter;
+    width: 45vw;
+}
+
+.project-started {
+    background-image: url(../img/contact-banner.jpg);
+    color: black;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 10px;
+    padding-bottom: 40px;
+}
+
+    .project-started
+    h2 {
+        text-decoration: none;
+        border-bottom: 3px solid #43c6ac;
+        padding-bottom: 20px;
+    }
+
+    .project-started
+    p {
+        font-family: 'Rubik', sans-serif;
+        font-size: 15px;
+        line-height: 25px;
+        font-weight: lighter;
+    }
+
+form {
+    color: #fff;
+    padding-bottom: 20px;
+    font-family: 'Rubik', sans-serif;
+    line-height: 25px;
+    font-weight: lighter;
+}
+
+td {
+    border: 1px solid #fff;
+    padding: 5px 10px 5px 10px;
+}
+
+tr:hover {
+    background-color: #43c6ac;
+}
+
+th {
+    background-color: #191654;
+    color: #fff;
+}
+
+table {
+    padding: 20px;
+}
+
+button {
+    background-color: green;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+label {
+    padding-bottom: 20px;
+}
+
+.welcome .hide{
+    padding: 0;
+    margin: 0;
+}
+
+.crud label{
+    color: white;
+}
+
+.crud form {
+    display: block;
+    margin-top: 0em;
+    box-sizing: border-box;
+}
+
+.crud label {
+    width: 100%;
+    font-size: 16px;
+    font-family: 'Rubik', sans-serif;
+    line-height: 25px;
+    font-weight: lighter;
+}
+
+.crud input {
+    width: 100%;
+    font-size: 16px;
+    font-family: 'Rubik', sans-serif;
+    line-height: 25px;
+    font-weight: lighter;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+.crud select {
+    width: 100%;
+    font-size: 16px;
+    font-family: 'Rubik', sans-serif;
+    line-height: 25px;
+    font-weight: lighter;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+.crud option {
+    width: 100%;
+    font-size: 16px;
+    font-family: 'Rubik', sans-serif;
+    line-height: 25px;
+    font-weight: lighter;
+    margin-bottom: 20px;
+    display: inline-block;
+}
