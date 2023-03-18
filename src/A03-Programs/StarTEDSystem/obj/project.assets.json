@@ -1915,11 +1915,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Jeremy Steem\\Documents\\School\\NAIT\\CPSC1517 -  Intro to App Develepment\\Assignments\\cpsc-1517-sep-2022-a01-project-JeremySteem\\src\\A03-Programs\\StarTEDSystem\\StarTEDSystem.csproj",
+      "projectUniqueName": "C:\\Users\\Jeremy Steem\\Downloads\\C-Sharp-and-Dot-NET-Demo\\src\\A03-Programs\\StarTEDSystem\\StarTEDSystem.csproj",
       "projectName": "StarTEDSystem",
-      "projectPath": "C:\\Users\\Jeremy Steem\\Documents\\School\\NAIT\\CPSC1517 -  Intro to App Develepment\\Assignments\\cpsc-1517-sep-2022-a01-project-JeremySteem\\src\\A03-Programs\\StarTEDSystem\\StarTEDSystem.csproj",
+      "projectPath": "C:\\Users\\Jeremy Steem\\Downloads\\C-Sharp-and-Dot-NET-Demo\\src\\A03-Programs\\StarTEDSystem\\StarTEDSystem.csproj",
       "packagesPath": "C:\\Users\\Jeremy Steem\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Jeremy Steem\\Documents\\School\\NAIT\\CPSC1517 -  Intro to App Develepment\\Assignments\\cpsc-1517-sep-2022-a01-project-JeremySteem\\src\\A03-Programs\\StarTEDSystem\\obj\\",
+      "outputPath": "C:\\Users\\Jeremy Steem\\Downloads\\C-Sharp-and-Dot-NET-Demo\\src\\A03-Programs\\StarTEDSystem\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Jeremy Steem\\AppData\\Roaming\\NuGet\\NuGet.Config",

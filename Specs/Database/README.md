@@ -1,6 +1,6 @@
-# Lab Database
+# Database
 
-The lab's database - [**StarTED.bacpac**](./StarTED.bacpac) - is available as a Data-tier Application.
+The Database - [**StarTED.bacpac**](./StarTED.bacpac) - is available as a Data-tier Application.
 
 ## Installing a Bacpac
 

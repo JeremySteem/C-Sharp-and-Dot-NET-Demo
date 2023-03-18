@@ -1,45 +1,47 @@
-# CPSC1517 Project Specs
+## Required Projects
+The solution is a client-server solution consisting of multiple projects as outlined in the course. The Presentation Layer portion is an ASP.NET Web Application (**.NET Core** Razor Pages). The BLL, Entity classes and DAL portions of the system are placed in a separate class library project.
 
-> ***StarTED*** Database - A simple database for a post-secondary school. Follow the [Database Installation Instructions](./Database/ReadMe.md) to set up **Star-TED** on your computer.
+## The StarTED Database
+The database supplied for this lab is an SQL Server database named "StarTED". The following is a sample of the connection string that is used for the Presentation Layer.
 
-## Overview
+```json
+  "StarTEDDb": "Server=.;Database=StarTED;Trusted_Connection=true;MultipleActiveResultSets=true",
+   "StarTEDRemoteVpnDmitDB" : "Server=DMIT-Capstone1.ad.sast.ca;Database=CPSC1517_1221_yourSection_yourNaitUserName;User Id=yourNaitUsername;Password=RemotePassword.yourNaitStudentId;TrustServerCertificate=True;MultipleActiveResultSets=true",
+    "StarTEDRemoteDmitDB" : "Server=CAPSTONE1.dmit.sast.ca;Database=CPSC1517_1221_yourSection_yourNaitUserName;User Id=yourNaitUsername;Password=RemotePassword.yourNaitStudentId;TrustServerCertificate=True;MultipleActiveResultSets=true",
+```
 
-This document outlines the marking guide and general requirements for the lab. You are expected to work on a **single** scenario from the [catalogue of scenarios](./Scenarios/README.md) developed for the [***StarTED*** database](./Database/README.md). Your instructor will provide information on how to determine your specific scenario (A01, A02, A03, A04, or A14). Each scenario revolves around generating two fully-functional forms:
+## The Forms
+There are two pages for the core functionality of this project (described below). All of these pages must use the same [layout](#layout-and-styling).
 
-* Query – Data Lookup with Tabular Display.
-* CRUD – Single item Create/Read/Update/Delete.
+### Layout and Styling
+The styling approach for this site uses custom css. The layout page contains: 
 
-Your instructor will provide any additional information on submitting/demonstrating the lab.
+* **Site Navigation** – Links to all the pages in the web application.
+* **Scenario Title** – The number and name of the scenario (e.g.: G1 – Reservations by Group).
+* **Student Name** – My first and last name.
 
-## The Deliverables
+### Default Page
 
-This project is divided into several deliverables, outlined below.  The due dates for each deliverable are subject to change.
+The **Index** page contains the following elements (each with their own heading):
 
-
-* [**Deliverable 1:** - 5 %](./Deliverable-1.md) – Due **Nov 16, 2022**: Week 12
-  * Initial solution setup with class libraries and web application including but not limited to: entities setup, database connection, appropriate references and navigation
-* [**Deliverable 2:** - 10 %](./Deliverable-2.md) – Due **Nov 30, 2022**: Week 14
-  * Query page.
-* [**Deliverable 3:** - 20 %](./Deliverable-3.md) – Due **Dec 15, 2022**: Week 16
-  * CRUD page.
-
-> Each deliverable part is cumulative, building on previous deliverable parts of the solution. For each deliverable, any and all supporting functionality of previous deliverables must function correctly in order to gain marks for the demonstrated deliverable.
->
-> Your instructor is free to make changes and/or additions to this lab and its marking guide(s). ***You*** are responsible to make sure that you are up-to-date with all the changes/additions made by your instructor.
->
-> ***Late labs or failure to demonstrate as required will receive a mark of zero for each affected deliverable.***
-
+- **Deliverable Descriptions** – A brief description (one or two paragraphs) of the `Query` and `CRUD` page's requirements in the project, identifying the name of the page and its purpose, along with any unique constraints or characteristics of the page's behaviour.
+- **Known Bugs** – A bulleted list of all the known bugs and incomplete portions of the lab.
+- **Entity Relationship Diagram** - The ERD diagram.
+- **Site Styling Decision** - Indicate what [site-wide styling](#layout-and-styling) you are using in your website.
 ----
+## Query – Search/Filter & Display Results
+This page displays multiple rows of data in an HTML table, with appropriate links from this page to the CRUD page for editing related data on this page or adding new data. This page also implement's pagination, with the page size being set to 10 to 25 rows per page. 
+___
 
-## Generalized Marking Rubric
+## CRUD – Single Item CRUD
+On this page: 
+* **Insert** new rows of data into a table
+* **Update** an existing row of data in a table
+* **Delete** (or mark as inactive/not current) a row of data in a table
+* **Cancel** editing (this should return the user to the `Query` page)
 
-The following generalized marking rubric will be applied to items in your individual exercises.
+### Handling Foreign Keys With Large Data Sets
+For many of the scenarios, foreign key information will have to be handled in a search/filter manner. The reason for this is because there are far too many rows of data to put in a single drop-down control. For example, with thousands of *Students* in the database, it is impractical to fill a drop-down and expect a user to find the student they wish to edit. In these situations, a two-step selection process makes the form more manageable by the user. 
 
-| Weight | Breakdown |
-| ---- | --------- |
-| **1** | 1 = **Proficient** (requirement is met)<br />0 = **Incomplete** (requirement not met) |
-| **2** | 2 = **Proficient** (requirement is met)<br />1 = **Limited** (requirement is poorly met, minor errors)<br />0 = **Incomplete** (requirement not met, missing large portions) |
-| **3** | 3 = **Proficient** (requirement is met)<br />2 = **Capable** (requirement is adequately met, minor errors)<br />1 = **Limited** (requirement is poorly met, major errors)<br />0 = **Incomplete** (requirement not met, missing large portions) |
-| **4** | 4 = **Proficient** (requirement is met)<br />3 = **Capable** (requirement is adequately met, minor errors)<br />2 = **Acceptable** (requirement is partially met, minor errors)<br />1 = **Limited** (requirement is poorly met, major errors)<br />0 = **Incomplete** (requirement not met, missing large portions) |
-| **5** | 5 = **Proficient** (requirement is fully met)<br />4 = **Capable** (requirement is adequately met, minor errors)<br />3 = **Acceptable** (requirement is partially met, minor errors)<br />2 = **Sub-Par** (requirement is partially met, significant errors)<br />1 = **Limited** (requirement is poorly met, major errors)<br />0 = **Incomplete** (requirement not met, missing large portions) |
-| **10** | 10 = **Proficient** (requirement is fully met)<br />8 = **Capable** (requirement is adequately met, minor errors)<br />6 = **Acceptable** (requirement is partially met, minor errors)<br />4 = **Sub-Par** (requirement is partially met, significant errors)<br />2 = **Limited** (requirement is poorly met, major errors)<br />0 = **Incomplete** (requirement not met, missing large portions) |
+### Processing Delete
+Depending on the scenario and the table, the Delete functionality may not be a physical removal of a row of data. This is because some tables have triggers or other constraints that prevent the removal of existing rows. In these cases where a row cannot be deleted (excluding foreign key constraints preventing removal), the table will have some means of flagging the row as being inactive or not current. 

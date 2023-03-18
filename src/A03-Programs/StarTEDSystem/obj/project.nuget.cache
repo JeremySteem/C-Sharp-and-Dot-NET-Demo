@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "c39KIPYC9gk+UA9nxeab1d8/Aq4uRdC+D2DZ+Id+9A0RCUo2ML6yOA7T6ZScojq/5mkcGqhEalMKD5Hhc0qeuA==",
+  "dgSpecHash": "Nuyn/owGEWf5bzrnkRwnx+iehlq7/7Gvc7FQtBEnhV0fqfRDTOcLOReVgwZlqqsoLSEPrMkCusJ8jqCO36ZZ/Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Jeremy Steem\\Documents\\School\\NAIT\\CPSC1517 -  Intro to App Develepment\\Assignments\\cpsc-1517-sep-2022-a01-project-JeremySteem\\src\\A03-Programs\\StarTEDSystem\\StarTEDSystem.csproj",
+  "projectFilePath": "C:\\Users\\Jeremy Steem\\Downloads\\C-Sharp-and-Dot-NET-Demo\\src\\A03-Programs\\StarTEDSystem\\StarTEDSystem.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Jeremy Steem\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\Jeremy Steem\\.nuget\\packages\\microsoft.data.sqlclient\\2.1.4\\microsoft.data.sqlclient.2.1.4.nupkg.sha512",

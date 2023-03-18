@@ -1934,11 +1934,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Jeremy Steem\\Documents\\School\\NAIT\\CPSC1517 -  Intro to App Develepment\\Assignments\\cpsc-1517-sep-2022-a01-project-JeremySteem\\src\\A03-Programs\\WebApp\\WebApp.csproj",
+      "projectUniqueName": "C:\\Users\\Jeremy Steem\\Downloads\\C-Sharp-and-Dot-NET-Demo\\src\\A03-Programs\\WebApp\\WebApp.csproj",
       "projectName": "WebApp",
-      "projectPath": "C:\\Users\\Jeremy Steem\\Documents\\School\\NAIT\\CPSC1517 -  Intro to App Develepment\\Assignments\\cpsc-1517-sep-2022-a01-project-JeremySteem\\src\\A03-Programs\\WebApp\\WebApp.csproj",
+      "projectPath": "C:\\Users\\Jeremy Steem\\Downloads\\C-Sharp-and-Dot-NET-Demo\\src\\A03-Programs\\WebApp\\WebApp.csproj",
       "packagesPath": "C:\\Users\\Jeremy Steem\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Jeremy Steem\\Documents\\School\\NAIT\\CPSC1517 -  Intro to App Develepment\\Assignments\\cpsc-1517-sep-2022-a01-project-JeremySteem\\src\\A03-Programs\\WebApp\\obj\\",
+      "outputPath": "C:\\Users\\Jeremy Steem\\Downloads\\C-Sharp-and-Dot-NET-Demo\\src\\A03-Programs\\WebApp\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Jeremy Steem\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -1955,8 +1955,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\Jeremy Steem\\Documents\\School\\NAIT\\CPSC1517 -  Intro to App Develepment\\Assignments\\cpsc-1517-sep-2022-a01-project-JeremySteem\\src\\A03-Programs\\StarTEDSystem\\StarTEDSystem.csproj": {
-              "projectPath": "C:\\Users\\Jeremy Steem\\Documents\\School\\NAIT\\CPSC1517 -  Intro to App Develepment\\Assignments\\cpsc-1517-sep-2022-a01-project-JeremySteem\\src\\A03-Programs\\StarTEDSystem\\StarTEDSystem.csproj"
+            "C:\\Users\\Jeremy Steem\\Downloads\\C-Sharp-and-Dot-NET-Demo\\src\\A03-Programs\\StarTEDSystem\\StarTEDSystem.csproj": {
+              "projectPath": "C:\\Users\\Jeremy Steem\\Downloads\\C-Sharp-and-Dot-NET-Demo\\src\\A03-Programs\\StarTEDSystem\\StarTEDSystem.csproj"
             }
           }
         }
